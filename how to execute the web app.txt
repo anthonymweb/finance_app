@@ -1,0 +1,3 @@
+Start the Apache and MySQL servers in XAMPP.
+Open your browser and navigate to (  http://localhost/finance_app/views/  ).
+https://github.com/anthonymweb/finance_app.git

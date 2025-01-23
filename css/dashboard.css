@@ -1,0 +1,137 @@
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #8AD3B8;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+.header .user-info {
+    font-size: 1rem;
+    position: absolute;
+    right: 20px; /* Position user info to the right */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 70px; /* Below the header */
+    left: -250px; /* Initially hidden */
+    background-color: #343a40;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.show {
+    left: 0; /* Slide in */
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #ced4da;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #8AD3B8;
+    background-color: #8AD3B8;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 0;
+    margin-top: 80px; /* Space for header */
+    transition: margin-left 0.3s ease;
+    padding: 20px;
+}
+
+.main-content.shift {
+    margin-left: 250px; /* Shift when sidebar is shown */
+}
+
+/* Toggle Button Styles */
+.toggle-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #8AD3B8;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+}
+
+/* Table Styles */
+.table {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+/* Button Styles */
+.btn {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.alert {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .header .user-info {
+        font-size: 0.8rem;
+    }
+
+    .sidebar a {
+        font-size: 16px;
+    }
+
+    .toggle-btn {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
